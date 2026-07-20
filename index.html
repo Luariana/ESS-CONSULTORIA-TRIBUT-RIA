@@ -8,20 +8,20 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         body { background-color: #000000; color: #ffffff; min-height: 100vh; display: flex; flex-direction: column; }
         
-        /* Estilo do cabeçalho */
-        cabeçalho { 
+        /* Estilo do cabeçalho centralizado */
+        header { 
             background: #000000; 
             padding: 15px 25px; 
             border-bottom: 2px solid #d4af37; 
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center; /* Centraliza a logo no meio */
             gap: 12px;
         }
         
-        /* Estilo para garantir que a imagem não fique muito grande */
+        /* Estilo para aumentar a logo e mantê-la proporcional */
         .logo-header {
-            max-height: 50px; /* Ajusta a altura da imagem */
+            max-height: 80px; /* Aumentado para 80px para ficar maior */
             width: auto;       /* Mantém a proporção original */
             display: block;
         }
@@ -93,11 +93,9 @@
 </head>
 <body>
 
-    <cabeçalho>
-        <!-- AQUI FOI FEITA A ALTERAÇÃO -->
-        <!-- O texto longo foi substituído pela tag img -->
+    <header>
         <img src="logotipo.jpeg.jpeg" alt="Logotipo ESS Consultoria" class="logo-header">
-    </cabeçalho>
+    </header>
 
     <main>
         <div class="card" id="main-box">
@@ -128,7 +126,7 @@
             },
             {
                 texto: "3. Você ainda trabalha em dois ou mais empregos CLT?",
-                eliminaNaResposta: null // Resposta positiva ou negativa passa para a próxima pergunta
+                eliminaNaResposta: null 
             },
             {
                 texto: "4. A soma dos seus salários em todos os empregos era superior ao teto do INSS (Atualmente R$ 8.475,55)?",
@@ -137,7 +135,7 @@
             },
             {
                 texto: "5. Você já solicitou a restituição desses valores antes?",
-                eliminaNaResposta: "Sim", // Se já solicitou antes, é desclassificado
+                eliminaNaResposta: "Sim", 
                 motivoEliminação: "Identificamos que você já realizou ou solicitou esse pedido de restituição anteriormente para o período."
             }
         ];
